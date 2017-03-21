@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="viewfinder_corner_width">4dp</dimen>
+    <dimen name="viewfinder_corner_height">20dp</dimen>
+
+    <dimen name="viewfinder_scan_hint">14sp</dimen>
+    <dimen name="viewfinder_scan_hint_margin_top">30dp</dimen>
+</resources>

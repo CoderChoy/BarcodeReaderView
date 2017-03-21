@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BarcodeReaderView">
+        <attr name="maskColor" format="color"/>
+        <attr name="laserColor" format="color"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="possibleResultPointColor" format="color"/>
+
+        <attr name="cornerWidth" format="dimension"/>
+        <attr name="cornerHeight" format="dimension"/>
+
+        <attr name="frameWidth" format="dimension"/>
+        <attr name="frameHeight" format="dimension"/>
+        <attr name="frameTopOffset" format="dimension"/>
+
+        <attr name="scanHintText" format="string"/>
+        <attr name="scanHintTextSize" format="dimension"/>
+        <attr name="scanHintTextColor" format="color"/>
+        <attr name="scanHintMarginTop" format="dimension"/>
+
+    </declare-styleable>
+</resources>

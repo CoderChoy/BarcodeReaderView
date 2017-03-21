@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.coderchoy.barcodereader.ScannerActivity">
+
+    <com.coderchoy.barcodereaderview.decode.BarcodeReaderView
+        android:id="@+id/brv_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:frameHeight="233dp"
+        app:frameTopOffset="30dp"
+        app:frameWidth="233dp"/>
+
+    <ToggleButton
+        android:id="@+id/tb_torch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:textOff="补光灯"
+        android:textOn="补光灯"/>
+
+    <ToggleButton
+        android:id="@+id/tb_vibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="10dp"
+        android:checked="true"
+        android:textOff="震动提示"
+        android:textOn="震动提示"/>
+
+    <ToggleButton
+        android:id="@+id/tb_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="10dp"
+        android:textOff="声音提示"
+        android:textOn="声音提示"/>
+
+</FrameLayout>
