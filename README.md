@@ -31,7 +31,7 @@ allprojects {
 
 ``` gradle
 dependencies {
-    compile 'com.github.coderchoy:BarcodeReaderView:1.0.0'
+    compile 'com.github.coderchoy:BarcodeReaderView:1.0.1'
 }
 ```
 

@@ -195,6 +195,8 @@ public class BarcodeReaderView extends SurfaceView implements SurfaceHolder.Call
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         possibleResultPoints = new ArrayList<>(5);
         lastPossibleResultPoints = null;
+
+        mBeepManager = new BeepManager(getContext());
     }
 
     /**
@@ -227,9 +229,6 @@ public class BarcodeReaderView extends SurfaceView implements SurfaceHolder.Call
         if (mBarcodeReaderHandler != null) {
             mBarcodeReaderHandler.quitSynchronously();
             mBarcodeReaderHandler = null;
-        }
-        if (mBeepManager != null) {
-            mBeepManager.close();
         }
         if (mCameraManager != null) {
             mCameraManager.closeDriver();
@@ -357,15 +356,12 @@ public class BarcodeReaderView extends SurfaceView implements SurfaceHolder.Call
     ///////////////////////继承方法区////////////////////////////////
 
     @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        mBeepManager = new BeepManager(getContext());
-    }
-
-    @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         onPause();
+        if (mBeepManager != null) {
+            mBeepManager.close();
+        }
     }
 
     @Override
